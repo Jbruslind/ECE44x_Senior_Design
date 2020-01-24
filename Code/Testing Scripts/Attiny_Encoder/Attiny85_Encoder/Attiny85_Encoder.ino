@@ -8,24 +8,22 @@
    http://creativecommons.org/licenses/by/4.0/
 */
 
-//#include <TinyWire.h>
+unsigned long interval = 100; //Rate to send encoder pulses
+unsigned long previousMillis = 0; //used for non-blocking timer
 
-//byte own_address = 10;
-unsigned long interval = 500; 
-unsigned long previousMillis = 0;
-
-const int EncoderA = 3;
-const int EncoderB = 4;
+const int EncoderA = 3; //pin to read encoder A pulses (pin 2 on Attiny85)
+const int EncoderB = 4; //pin to read encoder B pulses (pin 3 on Attiny85)
 
 // Rotary encoder **********************************************
 
 volatile int a0;
 volatile int c0;
-volatile int Count = 0;
+volatile int Count = 0; //regular integer to store value
+volatile byte data[2]; //used to store the integer for serial sending
 
 // Called when encoder value changes
 void ChangeValue (bool Up) {
-  Count = max(min((Count + (Up ? 1 : -1)), 1000), 0);
+  Count = max(min((Count + (Up ? 1 : -1)), 1000), -1000);
 }
 
 // Pin change interrupt service routine
@@ -41,33 +39,10 @@ ISR (PCINT0_vect) {
   }
 }
 
-
-
-//void onI2CRequest() {
-//  // sends one byte with content 'b' to the master, regardless how many bytes he expects
-//  // if the buffer is empty, but the master is still requesting, the slave aborts the communication
-//  // (so it is not blocking)
-//  TinyWire.send('b');
-//}
-//
-//void onI2CReceive(int howMany){
-//  // loops, until all received bytes are read
-//  while(TinyWire.available()>0){
-//    // toggles the led everytime, when an 'a' is received
-//    if(TinyWire.read()=='a'){
-//      TinyWire.send('a');
-//    }
-//  }
-//}
-
 // Setup demo **********************************************
 
 void setup() {
-  //TinyWire.begin( own_address );
- // register a handler function in case of a request from a master
-  //TinyWire.onRequest( onI2CRequest );
-  //TinyWire.onReceive( onI2CReceive );
-  Serial.begin(9600);
+  Serial.begin(9600); //TX is physical pin 5, RX pin 6
   pinMode(EncoderA, INPUT_PULLUP);
   pinMode(EncoderB, INPUT_PULLUP);
   PCMSK = 1<<EncoderA;        // Configure pin change interrupt on A
@@ -75,13 +50,16 @@ void setup() {
   GIFR = 1<<PCIF;             // Clear interrupt flag
 }
 
-void loop() {
+void loop(){
 
   unsigned long currentMillis = millis();
 
   if (currentMillis - previousMillis >= interval) {
     previousMillis = currentMillis;
-    Serial.write(Count);
+    data[0] = (byte) (Count & 0xFF); //bitmask the top half of the integer (bits 16 - 9)
+    data[1] = (byte) ((Count >> 8) & 0xFF); //bitmask bottom half of integer (bits (8 - 1)
+    Serial.write(data[0]); //Send lower byte first
+    Serial.write(data[1]); //Send upper byte second
   }
   
 }
