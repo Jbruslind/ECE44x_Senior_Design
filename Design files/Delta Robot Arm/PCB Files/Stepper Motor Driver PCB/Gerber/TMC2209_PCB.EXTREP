@@ -1,5 +1,5 @@
 ------------------------------------------------------------------------------------------
-Gerber File Extension Report For: TMC2209_PCB.GBR   1/19/2020  3:40:38 PM
+Gerber File Extension Report For: TMC2209_PCB.GBR   1/25/2020  1:50:36 AM
 ------------------------------------------------------------------------------------------
 
 
@@ -18,6 +18,13 @@ Layer Extension     Layer Description
 .GBO                Bottom Overlay                          
 .GKO                Keep-Out Layer                          
 .Outline            Mechanical 1                            
+.Dimensions         Mechanical 2                            
+.GM4                Mechanical 4                            
+.Assembly Top       Mechanical 8                            
+.3D Top             Mechanical 13                           
+.3D Bottom          Mechanical 14                           
+.Courtyard Top      Mechanical 15                           
+.Courtyard Bottom   Mechanical 16                           
 .GML                Multi-Layer                             
 .1                  Dielectric 1                            
 ------------------------------------------------------------------------------------------
