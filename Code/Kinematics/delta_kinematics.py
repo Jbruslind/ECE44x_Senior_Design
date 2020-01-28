@@ -1,8 +1,10 @@
 #Physical dimensions (in mm)
-e = 30.0                #End effector radius
-f = 100.0               #Base radius
+e = 72.0                #End triangle
+f = 173.205             #Base triangle
 re = 300.0              #Forearm length
 rf = 210.0              #Bicept length
+
+spd = 0.0005625         #degrees per step at 1/16th microstepping, 3200 steps per revolution
 
 #Trigonometric Constants
 sqrt3 = sqrt(3.0)
