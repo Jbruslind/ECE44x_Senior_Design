@@ -41,56 +41,11 @@
     <property name="title">
      <string>Controls</string>
     </property>
-    <widget class="QSpinBox" name="numberOfSamples">
-     <property name="geometry">
-      <rect>
-       <x>130</x>
-       <y>80</y>
-       <width>81</width>
-       <height>31</height>
-      </rect>
-     </property>
-     <property name="maximum">
-      <number>999</number>
-     </property>
-    </widget>
-    <widget class="QFrame" name="spinBoxFrame">
-     <property name="geometry">
-      <rect>
-       <x>10</x>
-       <y>60</y>
-       <width>201</width>
-       <height>80</height>
-      </rect>
-     </property>
-     <property name="frameShape">
-      <enum>QFrame::StyledPanel</enum>
-     </property>
-     <property name="frameShadow">
-      <enum>QFrame::Raised</enum>
-     </property>
-     <widget class="QLabel" name="spinBoxLabel">
-      <property name="geometry">
-       <rect>
-        <x>0</x>
-        <y>10</y>
-        <width>121</width>
-        <height>61</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>Number of samples to be tested</string>
-      </property>
-      <property name="wordWrap">
-       <bool>true</bool>
-      </property>
-     </widget>
-    </widget>
     <widget class="QWidget" name="buttonsWidget" native="true">
      <property name="geometry">
       <rect>
        <x>10</x>
-       <y>160</y>
+       <y>180</y>
        <width>221</width>
        <height>321</height>
       </rect>
@@ -162,9 +117,64 @@
       </property>
      </widget>
     </widget>
-    <zorder>buttonsWidget</zorder>
-    <zorder>spinBoxFrame</zorder>
-    <zorder>numberOfSamples</zorder>
+    <widget class="QSpinBox" name="numberOfSamples">
+     <property name="geometry">
+      <rect>
+       <x>140</x>
+       <y>50</y>
+       <width>81</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="maximum">
+      <number>999</number>
+     </property>
+    </widget>
+    <widget class="QLabel" name="spinBoxLabel">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>30</y>
+       <width>121</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Number of samples to be tested</string>
+     </property>
+     <property name="wordWrap">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QSpinBox" name="threshold">
+     <property name="geometry">
+      <rect>
+       <x>140</x>
+       <y>110</y>
+       <width>81</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="maximum">
+      <number>999</number>
+     </property>
+    </widget>
+    <widget class="QLabel" name="thresholdLabel">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>100</y>
+       <width>121</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Test Threshold</string>
+     </property>
+     <property name="wordWrap">
+      <bool>true</bool>
+     </property>
+    </widget>
    </widget>
    <widget class="QGroupBox" name="resultsGroupBox">
     <property name="geometry">
