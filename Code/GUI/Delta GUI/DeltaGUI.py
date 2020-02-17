@@ -70,7 +70,6 @@ class Ui_MicrobialAnalysis(object):
         self.sampleNumber.setGeometry(QtCore.QRect(210, 80, 231, 41))
         self.sampleNumber.setFont(font)
         self.sampleNumber.setAutoFillBackground(False)
-        self.sampleNumber.setFrameShape(QtWidgets.QFrame.Box)
         self.sampleNumber.setAlignment(QtCore.Qt.AlignCenter)
         self.sampleNumber.setObjectName("sampleNumber")
 
@@ -78,7 +77,6 @@ class Ui_MicrobialAnalysis(object):
         self.clientName.setGeometry(QtCore.QRect(210, 30, 231, 41))  
         self.clientName.setFont(font)
         self.clientName.setAutoFillBackground(False)
-        self.clientName.setFrameShape(QtWidgets.QFrame.Box)
         self.clientName.setScaledContents(False)
         self.clientName.setAlignment(QtCore.Qt.AlignCenter)
         self.clientName.setObjectName("clientName")
@@ -87,7 +85,6 @@ class Ui_MicrobialAnalysis(object):
         self.passFail.setGeometry(QtCore.QRect(210, 130, 231, 41))
         self.passFail.setFont(font)
         self.passFail.setAutoFillBackground(False)
-        self.passFail.setFrameShape(QtWidgets.QFrame.Box)
         self.passFail.setAlignment(QtCore.Qt.AlignCenter)
         self.passFail.setObjectName("passFail")
 
@@ -95,7 +92,6 @@ class Ui_MicrobialAnalysis(object):
         self.colonyCount.setGeometry(QtCore.QRect(210, 180, 231, 41))
         self.colonyCount.setFont(font)
         self.colonyCount.setAutoFillBackground(False)
-        self.colonyCount.setFrameShape(QtWidgets.QFrame.Box)
         self.colonyCount.setAlignment(QtCore.Qt.AlignCenter)
         self.colonyCount.setObjectName("colonyCount")
 
@@ -118,12 +114,12 @@ class Ui_MicrobialAnalysis(object):
         self.progressBar = QtWidgets.QProgressBar(self.centralwidget)
         self.progressBar.setGeometry(QtCore.QRect(20, 530, 711, 41))
         self.progressBar.setFont(font)
-        self.progressBar.setProperty("value", 0)
+        self.progressBar.setProperty("value", 25)
         self.progressBar.setAlignment(QtCore.Qt.AlignCenter)
         self.progressBar.setInvertedAppearance(False)
         self.progressBar.setObjectName("progressBar")
-        progress_max = self.numberOfSamples.value()
-        self.progressBar.setMaximum(progress_max)
+        self.progressBar.setRange(0, 10000)
+        self.createProgressBar
 
         self.Image = QtWidgets.QGroupBox(self.centralwidget)
         self.Image.setGeometry(QtCore.QRect(260, 250, 471, 272))
@@ -133,10 +129,11 @@ class Ui_MicrobialAnalysis(object):
 
         self.sampleImage = QtWidgets.QLabel(self.Image)
         self.sampleImage.setGeometry(QtCore.QRect(10, 10, 451, 251))
-        self.sampleImage.setFrameShape(QtWidgets.QFrame.Box)
+        self.sampleImage.setSizePolicy()
         self.sampleImage.setText("")
-        self.sampleImage.setPixmap(QtGui.QPixmap("test.png"))
+        self.sampleImage.setPixmap(QtGui.QPixmap("Petrifilm.jpg"))
         self.sampleImage.setScaledContents(True)
+        self.sampleImage.setMinimumSize(10, 10)
         self.sampleImage.setObjectName("sampleImage")
 
         MicrobialAnalysis.setCentralWidget(self.centralwidget)
@@ -153,6 +150,8 @@ class Ui_MicrobialAnalysis(object):
         self.startButton.clicked.connect(self.start_clicked)
         self.stopButton.clicked.connect(self.stop_clicked) 
         self.resetButton.clicked.connect(self.reset_clicked)
+        
+
         
 
     def start_clicked(self):
@@ -178,12 +177,15 @@ class Ui_MicrobialAnalysis(object):
     def advanceProgressBar(self):
         curVal = self.progressBar.value()
         maxVal = self.progressBar.maximum()
-        self.progressBar.setValue(curVal + ((maxVal) - curVal) / 100)
+        self.progressBar.setValue(curVal + (maxVal - curVal) / 100)
 
-    def update_progess_bar(self):
+    def createProgressBar(self):
+        self.progressBar.setRange(0, 10000)
+        self.progressBar.setValue(0)
+
         timer = QtCore.QTimer(self)
         timer.timeout.connect(self.advanceProgressBar)
-        timer.start(1000)     
+        timer.start(1000)   
 
     def retranslateUi(self, MicrobialAnalysis):
         _translate = QtCore.QCoreApplication.translate
