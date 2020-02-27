@@ -1,4 +1,14 @@
 from PyQt5 import QtCore, QtGui, QtWidgets
+import clientInfo
+import deltaImageProcessor
+import time
+
+CLIENT_NAME = ""
+CUR_SAMPLE = 0
+TEST_RES = "RESULT"
+COL_COUNT = 0
+THRESHOLD = 0
+TOTAL_SAMP = 0
 
 class Ui_MicrobialAnalysis(object):
     def setupUi(self, MicrobialAnalysis):
@@ -129,9 +139,8 @@ class Ui_MicrobialAnalysis(object):
 
         self.sampleImage = QtWidgets.QLabel(self.Image)
         self.sampleImage.setGeometry(QtCore.QRect(10, 10, 451, 251))
-        self.sampleImage.setSizePolicy()
         self.sampleImage.setText("")
-        self.sampleImage.setPixmap(QtGui.QPixmap("Petrifilm.jpg"))
+        self.sampleImage.setPixmap(QtGui.QPixmap("sample.jpg"))
         self.sampleImage.setScaledContents(True)
         self.sampleImage.setMinimumSize(10, 10)
         self.sampleImage.setObjectName("sampleImage")
@@ -150,24 +159,10 @@ class Ui_MicrobialAnalysis(object):
         self.startButton.clicked.connect(self.start_clicked)
         self.stopButton.clicked.connect(self.stop_clicked) 
         self.resetButton.clicked.connect(self.reset_clicked)
-        
+      
 
-        
-
-    def start_clicked(self):
-        thresh_val = self.threshold.value()
-        num_samp = self.numberOfSamples.value()
-        num_col = self.colonyCount.text()
-        cli_name = self.clientName.text()
-        test_res = self.passFail.text()
-
-        print ("Start command sent.")
-        print ("Threshold: " + str(thresh_val))
-        print ("Number of Samples: " + str(num_samp))
-        print ("Client Name: " + cli_name)
-        print ("Microbial Count: " + str(num_col))
-        print ("Pass/Fail Result: " + test_res)
-
+            
+            
     def stop_clicked(self):
         print ("Stop command sent") 
 
@@ -197,18 +192,46 @@ class Ui_MicrobialAnalysis(object):
         self.spinBoxLabel.setText(_translate("MicrobialAnalysis", "Number of samples"))
         self.thresholdLabel.setText(_translate("MicrobialAnalysis", "Test Threshold"))
         self.resultsGroupBox.setTitle(_translate("MicrobialAnalysis", "Results"))
-        self.sampleNumber.setText(_translate("MicrobialAnalysis", "#10011001"))
-        self.clientName.setText(_translate("MicrobialAnalysis", "BeerMakers Inc."))
-        self.passFail.setText(_translate("MicrobialAnalysis", "Pass"))
-        self.colonyCount.setText(_translate("MicrobialAnalysis", "5"))
+        self.sampleNumber.setText(_translate("MicrobialAnalysis", "00000"))
+        self.clientName.setText(_translate("MicrobialAnalysis", "Brewmeister"))
+        self.passFail.setText(_translate("MicrobialAnalysis", "PASS"))
+        self.colonyCount.setText(_translate("MicrobialAnalysis", "000"))
         self.clientLabel.setText(_translate("MicrobialAnalysis", "Client Name"))
         self.sampleNumLabel.setText(_translate("MicrobialAnalysis", "Sample Number"))
         self.passFailLabel.setText(_translate("MicrobialAnalysis", "Pass/Fail"))
         self.colonycountLabel.setText(_translate("MicrobialAnalysis", "Colony Count"))
 
 
+    def start_clicked(self):
+        
+        THRESHOLD = self.threshold.value()                            #threshold for pass/fail test
+        TOTAL_SAMPLES = self.numberOfSamples.value()                  #total number of samples to be tested
+        CUR_SAMPLE = 1                                                #current sample number                                                #colony count for current sample
+        
+#        while(CUR_SAMPLE <= TOTAL_SAMPLES):
+#            print("Current Sample: " + str(CUR_SAMPLE))
+#            cur_samp_text = str(CUR_SAMPLE)
+#            self.sampleNumber.setText(cur_samp_text)                  #update current sample on GUI
+#            self.sampleNumber.update() 
+#            COL_COUNT = deltaImageProcessor.AnalyzeSample(CUR_SAMPLE) #run analysis
+#            print("Current Count: " + str(COL_COUNT))
+#            col_text = str(COL_COUNT)
+#            self.colonyCount.setText(col_text)                        #update colony count of curent sample
+#            self.colonyCount.update() 
+#            time.sleep(.5)                                            #let gui update
+#            
+#            if(COL_COUNT < THRESHOLD):                                #assign test result        
+#                TEST_RES = "PASS"
+#            else:
+#                TEST_RES = "FAIL"
+#                
+#            CUR_SAMPLE += 1                                           #incerment cur_sample
+#            self.passFail.setText(TEST_RES)                           #update TEST_RES text
+#            self.passFail.update()                                    #update GUI
+
 if __name__ == "__main__":
     import sys
+    #import_excel_info()
     app = QtWidgets.QApplication(sys.argv)
     MicrobialAnalysis = QtWidgets.QMainWindow()
     ui = Ui_MicrobialAnalysis()
