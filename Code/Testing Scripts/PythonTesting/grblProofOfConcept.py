@@ -1,5 +1,5 @@
-import serial
 import time
+import serial
 
 class ArduinoSerialObj:
     def __init__(self, portName):
@@ -21,13 +21,11 @@ class ArduinoSerialObj:
         self.serialObj.close()  #end serial communication when object is out of scope
 
     def write(self, strInput):
-        self.serialObj.write(strInput.encode('utf-8') + b"\r\n")    #string is encoded into byte-form and appended with a return and newline
-        time.sleep(1)
+        self.serialObj.write(strInput.encode('utf-8') + b"\r\n")    #string is encoded into byte-form and appended with a return and newline\
+        print(strInput)
+        time.sleep(.5)
 
     def read(self):
         while self.serialObj.inWaiting() > 0:      
             print(self.serialObj.readline().decode('ascii')) 
 
-with ArduinoSerialObj("COM3") as grblArduino:
-    grblArduino.write("$$")
-    grblArduino.read()
