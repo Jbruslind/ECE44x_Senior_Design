@@ -1,5 +1,4 @@
 from PyQt5 import QtCore, QtGui, QtWidgets
-import clientInfo
 import deltaImageProcessor
 import time
 
@@ -9,6 +8,40 @@ TEST_RES = "RESULT"
 COL_COUNT = 0
 THRESHOLD = 0
 TOTAL_SAMP = 0
+
+class imageProcessingThread(QtCore.QThread):
+    def __init__(self):
+        QtCore.QThread.__init__(self)
+
+    def __del__(self):
+        self.wait()
+
+    def run(self):
+         
+        THRESHOLD = self.threshold.value()                            #threshold for pass/fail test
+        TOTAL_SAMPLES = self.numberOfSamples.value()                  #total number of samples to be tested
+        CUR_SAMPLE = 1                                                #current sample number                                                #colony count for current sample
+        
+        while(CUR_SAMPLE <= TOTAL_SAMPLES):
+            print("Current Sample: " + str(CUR_SAMPLE))
+            cur_samp_text = str(CUR_SAMPLE)
+            self.sampleNumber.setText(cur_samp_text)                  #update current sample on GUI
+            self.sampleNumber.update() 
+            COL_COUNT = deltaImageProcessor.AnalyzeSample(CUR_SAMPLE) #run analysis
+            print("Current Count: " + str(COL_COUNT))
+            col_text = str(COL_COUNT)
+            self.colonyCount.setText(col_text)                        #update colony count of curent sample
+            self.colonyCount.update() 
+            time.sleep(.5)                                            #let gui update
+            
+            if(COL_COUNT < THRESHOLD):                                #assign test result        
+                TEST_RES = "PASS"
+            else:
+                TEST_RES = "FAIL"
+                
+            CUR_SAMPLE += 1                                           #incerment cur_sample
+            self.passFail.setText(TEST_RES)                           #update TEST_RES text
+            self.passFail.update()                                    #update GUI
 
 class Ui_MicrobialAnalysis(object):
     def setupUi(self, MicrobialAnalysis):
@@ -160,7 +193,8 @@ class Ui_MicrobialAnalysis(object):
         self.stopButton.clicked.connect(self.stop_clicked) 
         self.resetButton.clicked.connect(self.reset_clicked)
       
-
+        self.thread1 = imageProcessingThread()
+        self.thread1.start()
             
             
     def stop_clicked(self):
@@ -203,31 +237,7 @@ class Ui_MicrobialAnalysis(object):
 
 
     def start_clicked(self):
-        
-        THRESHOLD = self.threshold.value()                            #threshold for pass/fail test
-        TOTAL_SAMPLES = self.numberOfSamples.value()                  #total number of samples to be tested
-        CUR_SAMPLE = 1                                                #current sample number                                                #colony count for current sample
-        
-#        while(CUR_SAMPLE <= TOTAL_SAMPLES):
-#            print("Current Sample: " + str(CUR_SAMPLE))
-#            cur_samp_text = str(CUR_SAMPLE)
-#            self.sampleNumber.setText(cur_samp_text)                  #update current sample on GUI
-#            self.sampleNumber.update() 
-#            COL_COUNT = deltaImageProcessor.AnalyzeSample(CUR_SAMPLE) #run analysis
-#            print("Current Count: " + str(COL_COUNT))
-#            col_text = str(COL_COUNT)
-#            self.colonyCount.setText(col_text)                        #update colony count of curent sample
-#            self.colonyCount.update() 
-#            time.sleep(.5)                                            #let gui update
-#            
-#            if(COL_COUNT < THRESHOLD):                                #assign test result        
-#                TEST_RES = "PASS"
-#            else:
-#                TEST_RES = "FAIL"
-#                
-#            CUR_SAMPLE += 1                                           #incerment cur_sample
-#            self.passFail.setText(TEST_RES)                           #update TEST_RES text
-#            self.passFail.update()                                    #update GUI
+       self.thread1.start()
 
 if __name__ == "__main__":
     import sys
