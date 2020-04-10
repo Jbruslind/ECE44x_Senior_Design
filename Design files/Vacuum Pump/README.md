@@ -5,7 +5,7 @@ This vacuum pump is used to create suction in order to pick up the cultural samp
 ![VacuumPump](https://github.com/Jbruslind/ECE44x_Senior_Design/blob/master/Design%20files/Vacuum%20Pump/Images/VacuumPump.jpg)
 ![Datasheet](https://github.com/Jbruslind/ECE44x_Senior_Design/blob/master/Design%20files/Vacuum%20Pump/Images/Datasheet.jpg)
 
-## Terminal Voltage Application
+## Vacuum Pump Relay
 
 The vacuum pump simply turns on when a voltage is applied to the terminals. Therefore, the system will utilize a relay to turn the pump on and off. The schematic is as shown:
 
@@ -15,10 +15,14 @@ On the Auxiliary ATMEGA328 found on the Central PCB, the enable pin of the K1 re
 
 ![Relay](https://github.com/Jbruslind/ECE44x_Senior_Design/blob/master/Design%20files/Vacuum%20Pump/Images/Relay.jpg)
 
+## Voltage Regulator
+
 The 12VDC line is supplied by U1, a Cyntec MUN24AD03-SM, which is a simple buck converter that steps down a 24VDC signal to a 12VDC signal. The 24VDC signal is the “common” DC-bus throughout the system, which means it is supplied from an external load-regulating power supply that rectifies wall voltage. The Cyntec MUN24AD03-SM is capable of handling up to 3A, and is therefore more than plenty for our vacuum pump, which only draws 1A at maximum. 
 
 ![VoltageRegulator](https://github.com/Jbruslind/ECE44x_Senior_Design/blob/master/Design%20files/Vacuum%20Pump/Images/VoltageRegulator.jpg)
 ![RegulatorNet](https://github.com/Jbruslind/ECE44x_Senior_Design/blob/master/Design%20files/Vacuum%20Pump/Images/VoltageRegulatorNet.jpg)
+
+## Connector
 
 The D2028 vacuum pump is connected to the Primary Control PCB via the P5 header. 
 
