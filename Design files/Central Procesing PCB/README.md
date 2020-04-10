@@ -33,10 +33,11 @@ As mentioned above, the Central PCB provides 5VDC to the Raspberry Pi via its GP
 
 Furthermore, the Central PCB is also responsible for providing 12VDC to drive the vacuum pump. The vacuum pump simply turns on when a voltage is applied to the terminals. Therefore, the system will utilize a relay to turn the pump on and off. The schematic is as shown:
 
+![RegulatorNet](https://github.com/Jbruslind/ECE44x_Senior_Design/blob/master/Design%20files/Vacuum%20Pump/Images/VoltageRegulatorNet.jpg)
+
 The 12VDC line is supplied by U1, a Cyntec MUN24AD03-SM, which is a simple buck converter that steps down a 24VDC signal to a 12VDC signal. The 24VDC signal is the “common” DC-bus throughout the system, which means it is supplied from an external load-regulating power supply that rectifies wall voltage. The Cyntec MUN24AD03-SM is capable of handling up to 3A, and is therefore more than plenty for our vacuum pump, which only draws 1A at maximum. 
 
 ![VoltageRegulator](https://github.com/Jbruslind/ECE44x_Senior_Design/blob/master/Design%20files/Vacuum%20Pump/Images/VoltageRegulator.jpg)
-![RegulatorNet](https://github.com/Jbruslind/ECE44x_Senior_Design/blob/master/Design%20files/Vacuum%20Pump/Images/VoltageRegulatorNet.jpg)
 
 ## Vacuum Pump
 
