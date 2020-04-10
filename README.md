@@ -7,7 +7,7 @@ The Automated Microbial Analysis project aims to develop a system which is able 
 called PetriFilm automatically. This is a 3M product that is used in a variety of scientific capacities, mainly in food science and the medical field. 
 
 <!---![PetriFilm](https://github.com/Jbruslind/ECE44x_Senior_Design/blob/master/Admin_Stuff/Mechanical%20Research%20and%20Implementation/Pictures/3MPetrifilm.jpg){ width=50% }-->
-<img src="https://github.com/Jbruslind/ECE44x_Senior_Design/blob/master/Admin_Stuff/Mechanical%20Research%20and%20Implementation/Pictures/3MPetrifilm.jpg" width="400" height="400" />
+<img src="https://github.com/Jbruslind/ECE44x_Senior_Design/blob/master/Admin_Stuff/Mechanical%20Research%20and%20Implementation/Pictures/3MPetrifilm.jpg" width="300" height="300" />
 
 PetriFilm is a very thin paper-like substance which has 2 layers: on one there is an agar media film that is used to grow bacterium, 
 on the other there is a wax coating that is used to seal the sample from outside interference. A liquid sample can be applied to this 
@@ -30,7 +30,7 @@ and to improve it's overall time cost for this process (less mistakes mean less 
 many commercial off the shelf (COTS) parts with a few custom designed parts that were manufactured using a 3D printer (the Creality Ender 3 .4mm to be precise). 
 
 
-<img src="https://github.com/Jbruslind/ECE44x_Senior_Design/blob/master/Admin_Stuff/Mechanical%20Research%20and%20Implementation/Updated_Assembly_.png" width="400" height="400" />
+<img src="https://github.com/Jbruslind/ECE44x_Senior_Design/blob/master/Admin_Stuff/Mechanical%20Research%20and%20Implementation/Updated_Assembly_.png"  />
 ### Electrical Sub-System 
 
 ### Computer Science Sub-System
