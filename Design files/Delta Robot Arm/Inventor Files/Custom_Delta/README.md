@@ -43,7 +43,7 @@ building material we used to create the frame.
 
 The general drawing for 2020 Tslot extrusion is shown below (given in mm)
 
-<img src="https://github.com/Jbruslind/ECE44x_Senior_Design/blob/master/Design%20files/Delta%20Robot%20Arm/Inventor%20Files/Pictures/2020_drawing.jpg" width="300" height="300" />
+<img src="https://github.com/Jbruslind/ECE44x_Senior_Design/blob/master/Design%20files/Delta%20Robot%20Arm/Inventor%20Files/Pictures/2020_drawing.jpg" />
 
 
 #### 60deg 20/20 Joint 
@@ -52,19 +52,19 @@ This part was a custom designed component that linked 3 T Slot extrusion profile
 angle with the vertical plane. 6 copies of this model allowed for the overall hexagon frame to take shape. This component was 3D printed using PLA material 
 and was designed to withstand 4N of pushing force from either side (as shown in the simluation model) 
 
-<img src="https://github.com/Jbruslind/ECE44x_Senior_Design/blob/master/Design%20files/Delta%20Robot%20Arm/Inventor%20Files/Pictures/60_deg_2020_joint.png" width="300" height="300" />
+<img src="https://github.com/Jbruslind/ECE44x_Senior_Design/blob/master/Design%20files/Delta%20Robot%20Arm/Inventor%20Files/Pictures/60_deg_2020_joint.png" />
 
 
 Simulation Model
 
-<img src="https://github.com/Jbruslind/ECE44x_Senior_Design/blob/master/Design%20files/Delta%20Robot%20Arm/Inventor%20Files/Pictures/60_deg_2020_joint_sim.png" width="300" height="300" />
+<img src="https://github.com/Jbruslind/ECE44x_Senior_Design/blob/master/Design%20files/Delta%20Robot%20Arm/Inventor%20Files/Pictures/60_deg_2020_joint_sim.png" />
 
 ### End Effector 
 
 This assembly was created to help organize the end effector components. These components include the actual mechanical end effector mount, the suction cup
 and nylon barb that will link the pnumatic hose. 
 
-<img src="https://github.com/Jbruslind/ECE44x_Senior_Design/blob/master/Design%20files/Delta%20Robot%20Arm/Inventor%20Files/Pictures/End_Effector_V2.png" width="300" height="300" />
+<img src="https://github.com/Jbruslind/ECE44x_Senior_Design/blob/master/Design%20files/Delta%20Robot%20Arm/Inventor%20Files/Pictures/End_Effector_V2.png" />
 
 #### End Effector V2
 
