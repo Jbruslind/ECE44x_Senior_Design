@@ -49,3 +49,24 @@ The D2028 vacuum pump is connected to the Primary Control PCB via the P5 header.
 
 ![ConnectorNet](https://github.com/Jbruslind/ECE44x_Senior_Design/blob/master/Design%20files/Vacuum%20Pump/Images/ConnectorNet.jpg)
 ![Connector](https://github.com/Jbruslind/ECE44x_Senior_Design/blob/master/Design%20files/Vacuum%20Pump/Images/Connector.jpg)
+
+## Camera Flash
+
+The K2 relay is responsible for enabling the LEDs below the camera, in order to act as a flash. These LEDs take a 5V input, and are therefore tied to the 5V regulated line on the board. This setup is very similar to the vacuum pump, however it is only 5VDC instead of 12VDC. 
+
+![FlashRelayNet](https://github.com/Jbruslind/ECE44x_Senior_Design/blob/master/Design%20files/Central%20Procesing%20PCB/Images/FlashRelayNet.jpg)
+![FlashRelay](https://github.com/Jbruslind/ECE44x_Senior_Design/blob/master/Design%20files/Central%20Procesing%20PCB/Images/FlashRelay.jpg)
+
+## Onboard Microcontrollers
+
+The Central PCB also needs to connect all of the prior connections to two ATmega 328 microcontrollers, which will actually run the software we need to control the system. The PCB includes sockets to plop in two Arduino Nanos for testing and debugging purposes, but this will not be used in the final system. The back of the PCB hides the solder pads for two SMD ATmega 328s (AUX_ and Stepper_ on the PCB), as well as two external 16MHz clocks (X1 and X2), and two 5V regulators (Q1 and Q2).
+
+![ArduinoA](https://github.com/Jbruslind/ECE44x_Senior_Design/blob/master/Design%20files/Central%20Procesing%20PCB/Images/Arduino_A.jpg)
+![ArduinoB](https://github.com/Jbruslind/ECE44x_Senior_Design/blob/master/Design%20files/Central%20Procesing%20PCB/Images/Arduino_B.jpg)
+![ArduinoC](https://github.com/Jbruslind/ECE44x_Senior_Design/blob/master/Design%20files/Central%20Procesing%20PCB/Images/Arduino_C.jpg)
+
+Essentially, the PCB has the equivalent hardware of two integrated Arduino Nanos on board. They have the equivalent connections lifted straight from the official Nano schematic itself found [here](https://www.arduino.cc/en/uploads/Main/Arduino_Nano-Rev3.2-SCH.pdf).
+
+The Stepper_ ATMEGA 328 is responsible for running a program called ‘grbl’. grbl is a well-established software that is used for driving stepper motors. The user inputs G-Code, and grbl will generate the equivalent signals to be sent to the stepper motor driver that will move the motor to the coordinates defined in said G-Code. Essentially, the stepper driver is a median in which grbl can move the stepper motor directly. Along with other signals, the necessary signals generated from grbl are sent through the ethernet cable, where they are eventually interpreted by the TCM2209 on the Auxiliary Diver PCB. In the final system, the Raspberry Pi will be running a script which will send G-Code serially to the Stepper_ ATMEGA, which will control the position of the stepper motors indirectly via the stepper motor divers. 
+
+The AUX_ ATMEGA 328 is responsible for reading back the messages sent by the Auxiliary Stepper PCBs, as well as turning on the relays for the vacuum pump and the camera flash. An additional ATMEGA 328 was used in conjunction with the Stepper_ ATMEGA 328 due to computational bottlenecks. grbl is a very demanding program, and attempting to run additional code could impact the timing of the wave generation, meaning that the end stepper motor motion would not be as accurate or as smooth.
