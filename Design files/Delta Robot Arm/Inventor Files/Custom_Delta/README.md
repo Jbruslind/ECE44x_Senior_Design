@@ -106,4 +106,4 @@ design as close as possible (using the given CircuitMaker tools)
 PetriFilm was modeled just as a reference for the design of the system. It has been created to reflect the same color scheme and dimensions as actual Petrifilm
 (specifically the anarobic bacterial film)
 
-<img src="https://github.com/Jbruslind/ECE44x_Senior_Design/blob/master/Admin_Stuff/Mechanical%20Research%20and%20Implementation/PetriFilm.png"  />
+<img src="https://github.com/Jbruslind/ECE44x_Senior_Design/blob/master/Design%20files/Delta%20Robot%20Arm/Inventor%20Files/Pictures/PetriFilm.png"  />
