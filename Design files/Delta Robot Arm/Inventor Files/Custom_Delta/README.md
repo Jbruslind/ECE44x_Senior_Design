@@ -101,11 +101,9 @@ design as close as possible (using the given CircuitMaker tools)
 
 ### Motor Node 
 
-### Main PCB RPI Assembly
+### PetriFilm
 
-The Automated Microbial Analysis project aims to develop a system which is able to analyze a series of microbial samples on a special media 
-called PetriFilm automatically. This is a 3M product that is used in a variety of scientific capacities, mainly in food science and the medical field. 
+PetriFilm was modeled just as a reference for the design of the system. It has been created to reflect the same color scheme and dimensions as actual Petrifilm
+(specifically the anarobic bacterial film)
 
-<!---![PetriFilm](https://github.com/Jbruslind/ECE44x_Senior_Design/blob/master/Admin_Stuff/Mechanical%20Research%20and%20Implementation/Pictures/3MPetrifilm.jpg){ width=50% }-->
-
-
+<img src="https://github.com/Jbruslind/ECE44x_Senior_Design/blob/master/Admin_Stuff/Mechanical%20Research%20and%20Implementation/PetriFilm.png"  />
