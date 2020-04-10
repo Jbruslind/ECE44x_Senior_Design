@@ -6,7 +6,8 @@ ECE 441 - 443 Project folder with files for senior capstone project for Jorian B
 The Automated Microbial Analysis project aims to develop a system which is able to analyze a series of microbial samples on a special media 
 called PetriFilm automatically. This is a 3M product that is used in a variety of scientific capacities, mainly in food science and the medical field. 
 
-![PetriFilm](https://github.com/Jbruslind/ECE44x_Senior_Design/blob/master/Admin_Stuff/Mechanical%20Research%20and%20Implementation/Pictures/3MPetrifilm.jpg){ width=50% }
+<!---![PetriFilm](https://github.com/Jbruslind/ECE44x_Senior_Design/blob/master/Admin_Stuff/Mechanical%20Research%20and%20Implementation/Pictures/3MPetrifilm.jpg){ width=50% }-->
+<img src="https://github.com/Jbruslind/ECE44x_Senior_Design/blob/master/Admin_Stuff/Mechanical%20Research%20and%20Implementation/Pictures/3MPetrifilm.jpg" width="200" height="200" />
 
 PetriFilm is a very thin paper-like substance which has 2 layers: on one there is an agar media film that is used to grow bacterium, 
 on the other there is a wax coating that is used to seal the sample from outside interference. A liquid sample can be applied to this 
