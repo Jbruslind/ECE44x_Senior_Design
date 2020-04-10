@@ -6,7 +6,7 @@ ECE 441 - 443 Project folder with files for senior capstone project for Jorian B
 The Automated Microbial Analysis project aims to develop a system which is able to analyze a series of microbial samples on a special media 
 called PetriFilm automatically. This is a 3M product that is used in a variety of scientific capacities, mainly in food science and the medical field. 
 
-![PetriFilm](https://github.com/Jbruslind/ECE44x_Senior_Design/blob/master/Admin_Stuff/Mechanical%20Research%20and%20Implementation/Pictures/3MPetrifilm.jpg)
+![PetriFilm](https://github.com/Jbruslind/ECE44x_Senior_Design/blob/master/Admin_Stuff/Mechanical%20Research%20and%20Implementation/Pictures/3MPetrifilm.jpg=250x)
 
 PetriFilm is a very thin paper-like substance which has 2 layers: on one there is an agar media film that is used to grow bacterium, 
 on the other there is a wax coating that is used to seal the sample from outside interference. A liquid sample can be applied to this 
@@ -17,8 +17,19 @@ agar film and left to incubate over a period of 1 - 2 days. After this time, the
  can easily take over an hour. The goal of our project is to use an automated system to count these bacteria colonies in sample sets of upwards 
  of 100+ in as little as 20 minutes. This data will be automatically stored and tabulated within the client's original database. 
 
+Being a robotics project there are inherent complexities that must be resolved between subgroups such as the electrical control of the mechanical design, 
+computer commands for electrical control and how effective the mechanical design facilitates the overall process. With that, the project must maintain 
+a high level of communication and simplicity so that all groups are able to understand how their design affects the overall system and others designs.
+
 ### Mechanical Sub-System 
 
+The mechanical sub-system was designed using industrial examples of delta robots in mind and special attention paid to the accuracy, speed, and cost of 
+each design. Arguably, the most important aspect of our project is that is must be accurate so as not to damage the provided samples 
+and to improve it's overall time cost for this process (less mistakes mean less time needed to recover). The delta robot design was made using 
+many commercial off the shelf (COTS) parts with a few custom designed parts that were manufactured using a 3D printer (the Creality Ender 3 .4mm to be precise). 
+
+![Delta Assembly](https://github.com/Jbruslind/ECE44x_Senior_Design/blob/master/Admin_Stuff/Mechanical%20Research%20and%20Implementation/Updated_Assembly_.png=250x)
+  
 ### Electrical Sub-System 
 
 ### Computer Science Sub-System
