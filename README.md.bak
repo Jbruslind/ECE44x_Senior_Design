@@ -23,6 +23,13 @@ a high level of communication and simplicity so that all groups are able to unde
 
 ### Mechanical Sub-System 
 
+The mechanical sub-system was designed using industrial examples of delta robots in mind and special attention paid to the accuracy, speed, and cost of 
+each design. Arguably, the most important aspect of our project is that is must be accurate so as not to damage the provided samples 
+and to improve it's overall time cost for this process (less mistakes mean less time needed to recover). The delta robot design was made using 
+many commercial off the shelf (COTS) parts with a few custom designed parts that were manufactured using a 3D printer (the Creality Ender 3 .4mm to be precise). 
+
+![Delta Assembly](https://github.com/Jbruslind/ECE44x_Senior_Design/blob/master/Admin_Stuff/Mechanical%20Research%20and%20Implementation/Updated_Assembly_.png=250x)
+  
 ### Electrical Sub-System 
 
 ### Computer Science Sub-System
