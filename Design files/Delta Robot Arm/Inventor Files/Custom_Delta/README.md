@@ -10,6 +10,14 @@ so that it is possible to simulate simple movement for the delta end effector (i
 
 <img src="https://github.com/Jbruslind/ECE44x_Senior_Design/blob/master/Design%20files/Delta%20Robot%20Arm/Inventor%20Files/Pictures/Custom_Delta_Assembly.png" />
 
+### Misc Files
+
+#### Delta Arm
+
+#### Stepper Face
+
+#### 
+
 ### Frame Skeleton 
 
 This model is a sub assembly that creates the general skelton shape for the Delta robot. It uses 20/20 

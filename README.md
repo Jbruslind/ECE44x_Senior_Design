@@ -43,3 +43,11 @@ stepper motor which can be controlled via a Raspberry Pi. An additional ATmega 3
 of the system as well. Such duties include enabling and disabling the vacuum pump, as well as enabling and disabling the flash for the system camera.
 
 ### Computer Science Sub-System
+
+The computer science sub-system has three primary functions: automation control, computer vision image analysis and user interface.
+ All three of these functions are implemented on the RaspberryPi microcontroller. The user interface is used to input various pieces of data 
+ such as how many samples are to be analyzed and also where the user starts/stops/resets the analysis process. The user interface is updated
+ throughout the process and displays the current sample image as well as relevant data about the sample. The automation controls are calculated 
+ by the RaspberryPi which then sends the control messages via serial interface to the ATmega328 where they are decoded and used to set the motors 
+ to the proper angles. The image analysis is handled using OpenCV and can analyze approximately 5 samples per minute. It counts the number of microbial
+ growths if any are present. After the data has been collected it is output to a .csv file that is easily transferred into a spreadsheet report.
