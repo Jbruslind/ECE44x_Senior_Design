@@ -31,6 +31,9 @@ many commercial off the shelf (COTS) parts with a few custom designed parts that
 
 
 <img src="https://github.com/Jbruslind/ECE44x_Senior_Design/blob/master/Admin_Stuff/Mechanical%20Research%20and%20Implementation/Updated_Assembly_.png"  />
+
 ### Electrical Sub-System 
+
+The system interacts with the samples to be tested via an end-effector that is moved by three stepper motors in a delta configuration. The goal of the Electrical Sub-System is to enable these interactions to happen at the command of the Computer Science Sub-System. The stepper motors are being controlled via an ATmega 328 microcontroller. The microcontroller is running specialized software which translates coordinates sent from a Raspberry Pi into waveforms representing the direction, distance, and speed a motor should move in. These waveforms are then passed to a stepper driver, which switches power to the motor according to the information within these waveforms. The end result is a stepper motor which can be controlled via a Raspberry Pi. An additional ATmega 328 microcontroller is utilized to control the other electrical aspects of the system as well. Such duties include enabling and disabling the vacuum pump, as well as enabling and disabling the flash for the system camera.
 
 ### Computer Science Sub-System
