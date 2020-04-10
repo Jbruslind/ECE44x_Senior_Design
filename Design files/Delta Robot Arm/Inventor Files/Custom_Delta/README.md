@@ -8,7 +8,7 @@ smaller assemblies (such as the end effector, skelton, motor node and main PCB) 
 as standalone components (such as the Delta Arm or Motor Mount). The model has been constrained 
 so that it is possible to simulate simple movement for the delta end effector (in the vertical direction). 
 
-<img src="https://github.com/Jbruslind/ECE44x_Senior_Design/blob/master/Design%20files/Delta%20Robot%20Arm/Inventor%20Files/Pictures/Custom_Delta_Assembly.png" width="300" height="300" />
+<img src="https://github.com/Jbruslind/ECE44x_Senior_Design/blob/master/Design%20files/Delta%20Robot%20Arm/Inventor%20Files/Pictures/Custom_Delta_Assembly.png" />
 
 ### Frame Skeleton 
 
@@ -16,7 +16,7 @@ This model is a sub assembly that creates the general skelton shape for the Delt
 aluminum T-slot extrusion to create a hexagon shape and is large enough to support the entire workspace 
 area for the delta mechanism (as calculated by the Marginally Clever robotics Delta robot tool).  
 
-<img src="https://github.com/Jbruslind/ECE44x_Senior_Design/blob/master/Design%20files/Delta%20Robot%20Arm/Inventor%20Files/Pictures/Frame_Skeleton.png" width="300" height="300" />
+<img src="https://github.com/Jbruslind/ECE44x_Senior_Design/blob/master/Design%20files/Delta%20Robot%20Arm/Inventor%20Files/Pictures/Frame_Skeleton.png" />
 
 #### Acrylic Panel
 
@@ -24,14 +24,14 @@ The Acryic panel model was designed to be laser cut or CNC'd using typical 3 - 5
 the shape of the 60 deg 20/20 joint on the bottom portion of the panel and has 4 mounting holes on either side in order to provide stiffness 
 to the overall frame. 
 
-<img src="https://github.com/Jbruslind/ECE44x_Senior_Design/blob/master/Design%20files/Delta%20Robot%20Arm/Inventor%20Files/Pictures/Acrylic_Panel.png" width="300" height="300" />
+<img src="https://github.com/Jbruslind/ECE44x_Senior_Design/blob/master/Design%20files/Delta%20Robot%20Arm/Inventor%20Files/Pictures/Acrylic_Panel.png" />
 
 #### Acrylic Panel Mounts
 
 This model is the exact same as the Acrylic Panel but this was determined to be used for mounting various PCBs/main electrical elements (such as the power supply 
 and Raspberry Pi). 
 
-<img src="https://github.com/Jbruslind/ECE44x_Senior_Design/blob/master/Design%20files/Delta%20Robot%20Arm/Inventor%20Files/Pictures/Acrylic_Panel_Mount.png" width="300" height="300" />
+<img src="https://github.com/Jbruslind/ECE44x_Senior_Design/blob/master/Design%20files/Delta%20Robot%20Arm/Inventor%20Files/Pictures/Acrylic_Panel_Mount.png" />
 
 
 #### T-slot Extrusion (350mm, 450mm)
@@ -39,11 +39,11 @@ and Raspberry Pi).
 There isn't really anything special about these models other than it is different lengths of 20mm T slot aluminum extrusion. This was the standard 
 building material we used to create the frame. 
 
-<img src="https://github.com/Jbruslind/ECE44x_Senior_Design/blob/master/Design%20files/Delta%20Robot%20Arm/Inventor%20Files/Pictures/2020_Tslot_350.png" width="300" height="300" />
+<img src="https://github.com/Jbruslind/ECE44x_Senior_Design/blob/master/Design%20files/Delta%20Robot%20Arm/Inventor%20Files/Pictures/2020_Tslot_350.png" />
 
 The general drawing for 2020 Tslot extrusion is shown below (given in mm)
 
-<img src="https://github.com/Jbruslind/ECE44x_Senior_Design/blob/master/Design%20files/Delta%20Robot%20Arm/Inventor%20Files/Pictures/2020_drawing.jpg" />
+<img src="https://github.com/Jbruslind/ECE44x_Senior_Design/blob/master/Design%20files/Delta%20Robot%20Arm/Inventor%20Files/Pictures/2020_drawing.jpg" width="300" height="300"  />
 
 
 #### 60deg 20/20 Joint 
@@ -68,9 +68,36 @@ and nylon barb that will link the pnumatic hose.
 
 #### End Effector V2
 
+This is the actual mechanical mount model for the end effector. This was modeled after Fanuc M1ia Delta series robot end effector. The curved mounting joints 
+were created so that there was an extra offset in the vertical direction (so that the end effector could read the bottom easily) and the material was shaped
+so that there were strategic cutouts to preserve the structural integrity while saving material. 
+
+<img src="https://github.com/Jbruslind/ECE44x_Senior_Design/blob/master/Design%20files/Delta%20Robot%20Arm/Inventor%20Files/Pictures/End_Effector_Mech.png" />
+
+There are M3 mounting holes surrounding the end effector plate for easy mounting of any additional components. Originally I did not know what the 
+PCB to control the suction cup feedback would look like so I put as many mounting holes as I could to accomodate.  
+
 #### Vaccum Cup and Fitting 
 
+The Vaccum Cup was bought from McMaster and specfied to be of 1/8" NPT pipe threads and to have a specific suction capability of at least 1.0 lbs. @ 24 in. of Hg.
+
+<img src="https://github.com/Jbruslind/ECE44x_Senior_Design/blob/master/Design%20files/Delta%20Robot%20Arm/Inventor%20Files/Pictures/Vaccum_Cup.png" />
+
 #### Nylon Barb
+
+The Nylon Barb model was also bought from Mcmaster to interface the 1/8" NPT pipe thread end of the suction cup to a 3mm nylon tube for the vaccum delivery. 
+
+<img src="https://github.com/Jbruslind/ECE44x_Senior_Design/blob/master/Design%20files/Delta%20Robot%20Arm/Inventor%20Files/Pictures/Nylon_Barb.png" />
+
+
+#### End Effector PCB
+
+The End Effector PCB was designed to interface a laser distance sensor (the VL53L1CXV0FY) to the main PCB. This sensor must be placed in a precise location 
+in order to detect when the samples are present or not below the end effector. We can use this information to detect any mis handling of the samples or 
+to dynamically determine how many samples are left (by measuring the distance of the sample stack). The PCB shape was design to mimic the End effector mechanical 
+design as close as possible (using the given CircuitMaker tools)
+
+<img src="https://github.com/Jbruslind/ECE44x_Senior_Design/blob/master/Design%20files/Delta%20Robot%20Arm/Inventor%20Files/Pictures/End_Effector_PCB.png" />
 
 ### Motor Node 
 
