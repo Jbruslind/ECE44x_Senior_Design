@@ -11,7 +11,7 @@ on the other there is a wax coating that is used to seal the sample from outside
 agar film and left to incubate over a period of 1 - 2 days. After this time, the bacteria that were present within the sample will have 
  had enough time to grow into colonies which are visible to the human eye. These colonies can be counted and the original number of bacterium 
  per unit volume can be known from the original sample. The process to count the bacteria samples and categorize them into datasets is often 
- tedious and can take a human operator around 1 - 2 minutes per sample \cite{3M_Interpretation}. With sample sizes of 50 - 60, this process 
+ tedious and can take a human operator around 1 - 2 minutes per sample. With sample sizes of 50 - 60, this process 
  can easily take over an hour. The goal of our project is to use an automated system to count these bacteria colonies in sample sets of upwards 
  of 100+ in as little as 20 minutes. This data will be automatically stored and tabulated within the client's original database. 
 
