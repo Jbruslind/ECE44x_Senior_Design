@@ -13,10 +13,63 @@ so that it is possible to simulate simple movement for the delta end effector (i
 ### Misc Files
 
 #### Delta Arm
+The Delta Arm is functionally very simple. All that is required is that it has specific distance between the rotation point of the stepper motor and 
+the pin joint of the lower arm linkage. For our application, we calculated this length to be 210mm, meaning the arm must accomate this 
+distance while also being structurally stable. It is important to note that the arm must be able to maintain accuracy during movement in 
+order to preserve the accuracy of the end effector. This means that the design must limit any distortion or elasitc effects of the material, for 
+PLA this simply means the PLA should not bend during movement. 
+
+The first version of the arm was a simple lever with a small cutout for the stepper collar to mount to and 2 holes for the pin and stepper motor shaft. 
+
+<img src="https://github.com/Jbruslind/ECE44x_Senior_Design/blob/master/Design%20files/Delta%20Robot%20Arm/Inventor%20Files/Pictures/Delta_ArmV1.png" />
+
+One issue that was discuess was the loss of torque in the motor due to some torque being contributed to lifting the arm itself. Since the arm has mass and 
+is being rotated, this reduces the available torque made available to the end effector. To solve this issue we must reduce the overall mass of the arm. 
+Using a the Autodesk Inventor "Generate Shape" tool, I was able to apply some simulated loads to the model and to remove any uncessary material while 
+still maintaining the same level of stiffness/structural integrity. The resulting mesh was generated and then extruded manually into the shape shown below. 
+
+<img src="https://github.com/Jbruslind/ECE44x_Senior_Design/blob/master/Design%20files/Delta%20Robot%20Arm/Inventor%20Files/Pictures/Delta_Arm.png" />
+
+The result is a model with the same mechanical properties as the original design, but with a 60% reduction in overall material. This benefits the design 
+through a faster print time as well as less mass overall in the arm. 
 
 #### Stepper Face
 
-#### 
+The stepper face was an intersting model to try and design as it must be able to be stiff (any motor movement will contribute to small inaccuracies) and 
+it must be able to hold a motor of a mass around 1kg. The result was a 3 point mounting system that was extruded to have the NEMA17 face profile. This would 
+then be able to be mounted to the frame/skeleton through 2 holes on the horizontal plane and 1 on the vertical plane. The overall effect is a very stiff, rugged 
+mount that is able to hold our stepper motors securely. 
+
+<img src="https://github.com/Jbruslind/ECE44x_Senior_Design/blob/master/Design%20files/Delta%20Robot%20Arm/Inventor%20Files/Pictures/Stepper_Face.png" />
+
+Another requirement of this model was that is must manipulate the stepper motor shaft so that is 60 degrees from the mounting skelton so as to create 
+the "delta" robot spacing (120 degree rotation points) with 2 more translated motors. To achieve this I put holes/points where I wanted the fasteners to 
+be mounted and I extruded a shape large enough for the Stepper motor (using the reference model dimensions) around those constraints. 
+
+<img src="https://github.com/Jbruslind/ECE44x_Senior_Design/blob/master/Design%20files/Delta%20Robot%20Arm/Inventor%20Files/Pictures/Stepper_Face_Top.png" />
+
+<img src="https://github.com/Jbruslind/ECE44x_Senior_Design/blob/master/Design%20files/Delta%20Robot%20Arm/Inventor%20Files/Pictures/Stepper_Face_Bot.png" />
+
+The model was also put through stress simulations to verify that it could hold the motor weight. 
+
+<img src="https://github.com/Jbruslind/ECE44x_Senior_Design/blob/master/Design%20files/Delta%20Robot%20Arm/Inventor%20Files/Pictures/Stepper_Face_sim.png" />
+
+
+#### Acrylic Top
+
+The top panels were only necessary to enclose the overall design while also providing a mounting point for the end stop limit switches. Due to the frame's 
+interesting geometry I decided to go with an interlocking panel design so that there were mounting points available on the 2020 t slot extrusion for 
+all the panels. As chance would have it, the maximum cut out dimensions required for these panels were the same as the side panels (so we could reuse material 
+cutouts). 
+
+<img src="https://github.com/Jbruslind/ECE44x_Senior_Design/blob/master/Design%20files/Delta%20Robot%20Arm/Inventor%20Files/Pictures/Acrylic_Top.png" />
+
+Cutouts were also made near the ends to accomodate for the 3D printed mounts that secured the 2020 aluminum.
+
+<img src="https://github.com/Jbruslind/ECE44x_Senior_Design/blob/master/Design%20files/Delta%20Robot%20Arm/Inventor%20Files/Pictures/Custom_Delta_Assembly_Top.png" />
+
+
+#### Acrylic Bot
 
 ### Frame Skeleton 
 
@@ -108,6 +161,12 @@ design as close as possible (using the given CircuitMaker tools)
 <img src="https://github.com/Jbruslind/ECE44x_Senior_Design/blob/master/Design%20files/Delta%20Robot%20Arm/Inventor%20Files/Pictures/End_Effector_PCB.png" />
 
 ### Motor Node 
+
+#### Motor Node PCB 
+
+#### Motor Case Bottom 
+
+#### Motor Case Top 
 
 ### PetriFilm
 
