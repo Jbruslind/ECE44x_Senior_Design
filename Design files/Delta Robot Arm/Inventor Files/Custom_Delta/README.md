@@ -71,6 +71,28 @@ Cutouts were also made near the ends to accomodate for the 3D printed mounts tha
 
 #### Acrylic Bot
 
+Similarly to the top panels, the bottom panels were necessary to enclose the design while also providing mounting space for various other mechanisms. Specifically 
+the bottom panels were used to load/unload samples as well as provide a mounting space for the camera and associated LED lighting. The design was made 
+with the same interlocking design as the top panels with cutouts made for the 3D printed mounts. 
+
+<img src="https://github.com/Jbruslind/ECE44x_Senior_Design/blob/master/Design%20files/Delta%20Robot%20Arm/Inventor%20Files/Pictures/Acrylic_Bot.png" />
+
+
+#### 8020 Top Connector 
+
+This model was made to hold 3 2020 t slot extrusion pieces 120 degrees apart so that they might be mounted to the interior of the frame. This would provide 
+mounting space for the acrylic panels while also giving some much needed rigity to the interior portion of the frame. 
+
+<img src="https://github.com/Jbruslind/ECE44x_Senior_Design/blob/master/Design%20files/Delta%20Robot%20Arm/Inventor%20Files/Pictures/8020_Top_Connector.png" />
+
+#### 8020 Bot Connector 
+
+The bot connector is functionally the same as the top connector, it's just made a little longer due to some miscuts made during manufacturing. The T slot 
+extrusion was cut a little short for this portion (due to my mismeasuring) and we had to accomate by adding some length to this part (which is why there's 
+2 seperate parts)
+
+<img src="https://github.com/Jbruslind/ECE44x_Senior_Design/blob/master/Design%20files/Delta%20Robot%20Arm/Inventor%20Files/Pictures/8020_Bot_Connector.png" />
+
 ### Frame Skeleton 
 
 This model is a sub assembly that creates the general skelton shape for the Delta robot. It uses 20/20 
