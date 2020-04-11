@@ -81,9 +81,14 @@ with the same interlocking design as the top panels with cutouts made for the 3D
 #### 8020 Top Connector 
 
 This model was made to hold 3 2020 t slot extrusion pieces 120 degrees apart so that they might be mounted to the interior of the frame. This would provide 
-mounting space for the acrylic panels while also giving some much needed rigity to the interior portion of the frame. 
+mounting space for the acrylic panels while also giving some much needed rigidity to the interior portion of the frame. 
 
 <img src="https://github.com/Jbruslind/ECE44x_Senior_Design/blob/master/Design%20files/Delta%20Robot%20Arm/Inventor%20Files/Pictures/8020_Top_Connector.png" />
+
+The bottom portion of the main assembly is shown below to illustrate how these parts were used in the frame: 
+
+<img src="https://github.com/Jbruslind/ECE44x_Senior_Design/blob/master/Design%20files/Delta%20Robot%20Arm/Inventor%20Files/Pictures/Custom_Delta_Assembly_Bot.png" />
+
 
 #### 8020 Bot Connector 
 
@@ -184,11 +189,29 @@ design as close as possible (using the given CircuitMaker tools)
 
 ### Motor Node 
 
+The Motor Node assembly was created to simplify the overall model organization within the main assembly. This includes the PCB model, bottom box model 
+and top lid model. Overall there is nothing really special about this other than it's a case for the PCB that can be mounted onto 2020 aluminum t slot.
+
 #### Motor Node PCB 
+
+This model was generated through CircuitMaker's 3D modeling exporter. 
+
+<img src="https://github.com/Jbruslind/ECE44x_Senior_Design/blob/master/Design%20files/Delta%20Robot%20Arm/Inventor%20Files/Pictures/Motor_Node_PCB.png" />
 
 #### Motor Case Bottom 
 
+This box was designed based on the connector and mounting hole placement on the PCB. What we realized during assembly is that one of the connectors on 
+the opposite sides of the box (the DB9 or Ethernet) should have its top material cut away to allow for easy placement. On the box you'll notice that 
+there is material bridges above each connector, one of these should be cut away (or removed entirely in the model) to actually place the populated PCB in 
+the case. 
+
+<img src="https://github.com/Jbruslind/ECE44x_Senior_Design/blob/master/Design%20files/Delta%20Robot%20Arm/Inventor%20Files/Pictures/Motor_Node_box.png" />
+
 #### Motor Case Top 
+
+The top portion of the box was modeled to have 4 mounting holes where M3 screws could secure the assmebly to itself through heatsets present in the bottom case. 
+
+<img src="https://github.com/Jbruslind/ECE44x_Senior_Design/blob/master/Design%20files/Delta%20Robot%20Arm/Inventor%20Files/Pictures/Motor_Node_top.png" />
 
 ### PetriFilm
 
