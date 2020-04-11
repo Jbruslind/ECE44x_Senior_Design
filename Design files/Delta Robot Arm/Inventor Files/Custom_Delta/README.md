@@ -192,6 +192,9 @@ design as close as possible (using the given CircuitMaker tools)
 The Motor Node assembly was created to simplify the overall model organization within the main assembly. This includes the PCB model, bottom box model 
 and top lid model. Overall there is nothing really special about this other than it's a case for the PCB that can be mounted onto 2020 aluminum t slot.
 
+<img src="https://github.com/Jbruslind/ECE44x_Senior_Design/blob/master/Design%20files/Delta%20Robot%20Arm/Inventor%20Files/Pictures/Motor_Node.png" />
+
+
 #### Motor Node PCB 
 
 This model was generated through CircuitMaker's 3D modeling exporter. 
