@@ -25,12 +25,13 @@ def imageCapture(imageNumber):
     # takes an image and stores in specified directory fileName
     camera.capture(fileName)
 
-def toCSV(fileInput):
+def toCSV(data):
     with open('/home/pi/Documents/deltaImageProcessor/Database/output.csv', 'w') as file:
-        writer = csv.writer(file)
-        writer.writerows(fileInput)
-
-
+        data_writer = csv.writer(file, delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL)
+        data_writer.writerow('/n')
+        data_writer.writerow(data)
+        
+        
 def AnalyzeSample(petriNumber):
     col_count = 0
     imageCapture(petriNumber)
