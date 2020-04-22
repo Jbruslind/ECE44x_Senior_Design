@@ -6,8 +6,10 @@ The Arduino Nano barely has enough memory to flash grbl on to it, but it does. F
 
 ![GrblNanoPinout](https://github.com/Jbruslind/ECE44x_Senior_Design/blob/master/Code/GRBL%20Code/GrblNanoPinout.PNG)
 
-Every other part of grbl is unmodified, aside from a few grbl settings used for smoother operation. Such settings are:
+Every other part of grbl is unmodified, aside from a few grbl settings used for smoother operation. Such settings are set as follows:
 
+|Setting|Value|
+|----|----|
 |$0|10|
 |$1|255|
 |$2|0|
