@@ -1,6 +1,16 @@
 # ECE44x_Senior_Design
 ECE 441 - 443 Project folder with files for senior capstone project for Jorian Bruslind, Mack Hall, and Zach Bendt
 
+Brief descriptions of each member's resposibilities are detailed below. Otherwise more info about each section can be found using the link below. 
+
+### ![Stepper Driver PCB](https://github.com/Jbruslind/ECE44x_Senior_Design/tree/master/Design%20files/Auxiliary%20Stepper%20Driver%20PCB)
+
+### ![Central Processor PCB](https://github.com/Jbruslind/ECE44x_Senior_Design/tree/master/Design%20files/Central%20Procesing%20PCB)
+
+### ![Vaccumn Pump Controller](https://github.com/Jbruslind/ECE44x_Senior_Design/tree/master/Design%20files/Vacuum%20Pump)
+
+### ![Custom Mechanical Parts/Models](https://github.com/Jbruslind/ECE44x_Senior_Design/tree/master/Design%20files/Delta%20Robot%20Arm/Inventor%20Files/Custom_Delta)
+
 ## Automated Microbial Analysis 
 
 The Automated Microbial Analysis project aims to develop a system which is able to analyze a series of microbial samples on a special media 
