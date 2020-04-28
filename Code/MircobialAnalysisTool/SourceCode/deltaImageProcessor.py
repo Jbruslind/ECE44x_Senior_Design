@@ -1,9 +1,9 @@
 import colonyCounter
 import time
 import csv
-import picamera
+#import picamera
 
-camera = picamera.PiCamera()         #initalize camera
+#camera = picamera.PiCamera()         #initalize camera
 
 SAMPLE_CNT = 0                       #initalize number of samples
 CUR_SAMPLE = 0                       #sample number of current sample
@@ -15,7 +15,7 @@ TEST_RES = ""                        #initalize PASS/FAIL test result
 
 def imageCapture(imageNumber):
     # sets the camera resolution
-    camera.resolution = (1920,1080)
+    #camera.resolution = (1920,1080)
     
     # sets the directory where the image is stored
     fileName = \
@@ -23,7 +23,7 @@ def imageCapture(imageNumber):
         + str(imageNumber) + ".jpg"                       
     
     # takes an image and stores in specified directory fileName
-    camera.capture(fileName)
+    #camera.capture(fileName)
 
 def toCSV(data):
     with open('/home/pi/Documents/deltaImageProcessor/Database/output.csv', 'w') as file:

@@ -203,8 +203,9 @@ class Ui_MicrobialAnalysis(object):
         self.sampleImage = QLabel(self.Image)
         self.sampleImage.setGeometry(QRect(10, 10, 451, 251))
         self.sampleImage.setText("")
-        directory = "/home/pi/Documents/deltaImageProcessor/"
-        imageName = "sample.jpg"
+        #directory = "/home/pi/Documents/deltaImageProcessor/"
+        directory = os.getcwd()
+        imageName = "test.png"
         self.sampleImage.setPixmap(QPixmap(os.path.join(directory, imageName)))
         self.sampleImage.setScaledContents(True)
         self.sampleImage.setMinimumSize(10, 10)
@@ -270,9 +271,10 @@ class Ui_MicrobialAnalysis(object):
         self.sampleNumber.setText(str(CUR_SAMPLE))
         self.colonyCount.setText(str(COL_COUNT))
         self.passFail.setText(str(TEST_RES))
-        directory = "/home/pi/Documents/deltaImageProcessor/images_with_keys/"
+        cwd = os.getcwd()
+        imdir = cwd + "/images_with_keys/"
         imageName = str(CUR_SAMPLE) + ".jpg"
-        self.sampleImage.setPixmap(QPixmap(os.path.join(directory, imageName)))
+        self.sampleImage.setPixmap(QPixmap(os.path.join(imdir, imageName)))
         CUR_SAMPLE += 1
         
     def thread_complete(self):
