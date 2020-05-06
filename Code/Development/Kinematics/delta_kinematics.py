@@ -1,3 +1,4 @@
+import math
 #Physical dimensions (in mm)
 e = 72.0                #End triangle
 f = 173.205             #Base triangle
