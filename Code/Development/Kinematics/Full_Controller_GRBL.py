@@ -142,7 +142,7 @@ while 1:
         step2 = int(1600/360 * angle2)
         step3 = int(1600/360 * angle3)
         if step1 != prevstep1 or step2 != prevstep2 or step3 != prevstep3:
-            grbl_command = "G90 G0 " + "X" + str(step1) + " Y" + str(step2) + " Z" + str(step3) + '\n'
+            grbl_command = "G90 G0 " + "X" + str(step1 * -1) + " Y" + str(step2 *-1) + " Z" + str(step3*-1) + '\n'
             print(grbl_command)
             s.write(grbl_command.encode())
             prevstep1 = step1
