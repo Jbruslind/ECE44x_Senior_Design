@@ -11,8 +11,10 @@ import math
 import serial
 import time
 
+clamp = lambda n, minn, maxn: max(min(maxn, n), minn)
+
 # Open grbl serial port
-s = serial.Serial('COM6',115200, timeout=.01) #COM port should be whatever the GRBL reciever is on
+s = serial.Serial('COM7',115200, timeout=.01) #COM port should be whatever the GRBL reciever is on
 
 #____________________________Kinematics Setup_____________________________________
 th1 = th2 = th3 = 90
@@ -110,6 +112,16 @@ angle1 = angle2 = angle3 = 0
 step1 = step2 = step3 = 0
 prevstep1 = prevstep2 = prevstep3 = 0
 
+com1 = com2 = com3 = 0
+
+
+def send_command(x,y,z):
+    angle1, angle2, angle3 = delta_calcInverse(x,y,z);
+    step1 = int(1600/360 * angle1)
+    step2 = int(1600/360 * angle2)
+    step3 = int(1600/360 * angle3)
+    grbl_command = "G90 G0 " + "X" + str(step1 * -1) + " Y" + str(step2 *-1) + " Z" + str(step3*-1) + '\n'
+    s.write(grbl_command.encode())
 # Wake up grbl
 s.write(str.encode("\r\n\r\n"))
 time.sleep(2)   # Wait for grbl to initialize 
@@ -136,7 +148,13 @@ while 1:
         start_code = 1
         
     if start_code:
-        angle1, angle2, angle3 = delta_calcInverse(usb_axes[3]*130, usb_axes[4]*130, (usb_axes[2] + 1)*110 + (-453.775))
+        com1 += int(usb_axes[3]*5)
+        com2 += int(usb_axes[4]*5)
+        com3 += int(usb_axes[2]*5)
+        com1 = clamp(com1, -130, 130)
+        com2 = clamp(com2, -130, 130)
+        com3 = clamp(com3, -475, -190)
+        angle1, angle2, angle3 = delta_calcInverse(com1, com2, com3);
         #print(angle1, angle2, angle3)
         step1 = int(1600/360 * angle1)
         step2 = int(1600/360 * angle2)
@@ -149,7 +167,28 @@ while 1:
             prevstep2 = step2
             prevstep3 = step3
             print(s.readline().strip())
-            time.sleep(.3)
+            time.sleep(.03)
+#        send_command(107,107,107)
+#        print(s.readline().strip())
+#        time.sleep(1)
+#        send_command(-107,107,107)
+#        print(s.readline().strip())
+#        time.sleep(1)
+#        send_command(-107,-107,107)
+#        print(s.readline().strip())
+#        time.sleep(1)
+#        send_command(107,-107,107)
+#        print(s.readline().strip())
+#        time.sleep(1)
+#        send_command(107,107,107)
+#        print(s.readline().strip())
+#        time.sleep(1)
+#        send_command(200,200,200)
+#        print(s.readline().strip())
+#        time.sleep(1)
+#        send_command(107,107,107)
+#        print(s.readline().strip())
+        
 s.close()
         
     
