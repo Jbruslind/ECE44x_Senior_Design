@@ -35,6 +35,8 @@ rf = 210 #Upper arm length (mm)
 sqrt3 = pow(3, 1/2)
 
 
+sleep_t = .75
+
 def delta_calcAngleYZ(x,y,z):
     y1 = -0.5 * .57735 * f
     y = y - (.5 * .57735 * e)
@@ -116,12 +118,9 @@ com1 = com2 = com3 = 0
 
 
 def send_command(x,y,z):
-    angle1, angle2, angle3 = delta_calcInverse(x,y,z);
-    step1 = int(1600/360 * angle1)
-    step2 = int(1600/360 * angle2)
-    step3 = int(1600/360 * angle3)
-    grbl_command = "G90 G0 " + "X" + str(step1 * -1) + " Y" + str(step2 *-1) + " Z" + str(step3*-1) + '\n'
+    grbl_command = "G90 G0 " + "X" + str(x) + " Y" + str(y) + " Z" + str(z) + '\n'
     s.write(grbl_command.encode())
+    print(s.readline().strip())
 # Wake up grbl
 s.write(str.encode("\r\n\r\n"))
 time.sleep(2)   # Wait for grbl to initialize 
@@ -168,26 +167,24 @@ while 1:
             prevstep3 = step3
             print(s.readline().strip())
             time.sleep(.03)
-#        send_command(107,107,107)
-#        print(s.readline().strip())
-#        time.sleep(1)
-#        send_command(-107,107,107)
-#        print(s.readline().strip())
-#        time.sleep(1)
-#        send_command(-107,-107,107)
-#        print(s.readline().strip())
-#        time.sleep(1)
-#        send_command(107,-107,107)
-#        print(s.readline().strip())
-#        time.sleep(1)
-#        send_command(107,107,107)
-#        print(s.readline().strip())
-#        time.sleep(1)
-#        send_command(200,200,200)
-#        print(s.readline().strip())
-#        time.sleep(1)
-#        send_command(107,107,107)
-#        print(s.readline().strip())
+#        send_command(10,-97,120)
+#        time.sleep(sleep_t)
+#        send_command(-152,-65,145)
+#        time.sleep(sleep_t)
+#        send_command(-111,146,-72)
+#        time.sleep(sleep_t)
+#        send_command(43,102,-111)
+#        time.sleep(sleep_t)
+#        send_command(117,-76,10)
+#        time.sleep(sleep_t)
+#        send_command(21,52,45)
+#        time.sleep(sleep_t)
+#        send_command(-29,-3,-9)
+#        time.sleep(sleep_t)
+#        send_command(51,86,79)
+#        time.sleep(sleep_t)
+#        send_command(-29,-3,-9)
+#        time.sleep(sleep_t * 10)
         
 s.close()
         
