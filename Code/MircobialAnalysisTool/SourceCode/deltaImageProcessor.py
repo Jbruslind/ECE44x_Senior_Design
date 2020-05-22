@@ -2,37 +2,46 @@ import colonyCounter
 import time
 import csv
 #import picamera
+import os
 
-#camera = picamera.PiCamera()         #initalize camera
+#camera = picamera.PiCamera()           #initalize camera
 
-SAMPLE_CNT = 0                       #initalize number of samples
-CUR_SAMPLE = 0                       #sample number of current sample
-COL_COUNT = 0                        #number of colonies found
-DATA_ARRAY = [" " for i in range(5)] #array that holds data for output to .csv
-COL_MAX = 5                          #test threshold
-CLI_INFO = "Client1"                 #initalize client info
-TEST_RES = ""                        #initalize PASS/FAIL test result 
+SAMPLE_CNT = 0                          #initalize number of samples
+CUR_SAMPLE = 0                          #sample number of current sample
+COL_COUNT = 0                           #number of colonies found
+DATA_ARRAY = [" " for i in range(5)]    #array that holds data for output to .csv
+COL_MAX = 5                             #test threshold
+CLI_INFO = "Client1"                    #initalize client info
+TEST_RES = ""                           #initalize PASS/FAIL test result 
 
 def imageCapture(imageNumber):
-    # sets the camera resolution
-    #camera.resolution = (1920,1080)
+    """captures an image using the RaspberryPi camera
+        and saves it in a folder called 'images' in the current working
+        directory. It names the file the number of the current sample"""
+
+#set the camera resolution
+    #camera.resolution = (1920,1080)    #set the camera resolution
     
-    # sets the directory where the image is stored
-    fileName = \
-        "/home/pi/Documents/deltaImageProcessor/images/"\
-        + str(imageNumber) + ".jpg"                       
+    cwd = os.getcwd()                   #gets the directory where the image is stored
+    fileName = cwd + str(imageNumber) + ".jpg"                       
     
-    # takes an image and stores in specified directory fileName
-    #camera.capture(fileName)
+    #camera.capture(fileName)           #takes an image and stores in specified directory fileName
 
 def toCSV(data):
-    with open('/home/pi/Documents/deltaImageProcessor/Database/output.csv', 'w') as file:
+    """creates a .csv in a folder named 'Database' in the current working directory
+        where the collected information about the sample is stored"""
+
+    cwd = os.getcwd()
+    with open(cwd + '/Database/output.csv', 'w') as file:
         data_writer = csv.writer(file, delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL)
         data_writer.writerow('/n')
         data_writer.writerow(data)
         
         
 def AnalyzeSample(petriNumber):
+    """Takes in the current sample number and runs image analysis.
+        returns the number of microbial samples found"""
+
     col_count = 0
     imageCapture(petriNumber)
     #perform image analysis.
