@@ -2,10 +2,10 @@
 
 This PCB acts as a link between the Primary Control PCB and the stepper motors themselves. Since there are three stepper motors, there will be three separate instances of this PCB in the final system. This PCB takes in a signal from one of the ATMEGA328s on the Primary Control PCB, and outputs another electrical signal which will turn the stepper motors. In order to verify that this PCB is working correctly, there are status LEDs for 24V and 5V power, as well as status LEDs for RX and TX packets.
 
-![PCB](https://github.com/Jbruslind/ECE44x_Senior_Design/blob/master/Design%20files/Auxiliary%20Stepper%20Driver%20PCB/Images/PCB.jpg)
-![PCB_Bottom](https://github.com/Jbruslind/ECE44x_Senior_Design/blob/master/Design%20files/Auxiliary%20Stepper%20Driver%20PCB/Images/PCB_Bottom.jpg)
-![PCB_LayerTop](https://github.com/Jbruslind/ECE44x_Senior_Design/blob/master/Design%20files/Auxiliary%20Stepper%20Driver%20PCB/Images/PCB_LayerTop.jpg)
-![PCB_LayerBottom](https://github.com/Jbruslind/ECE44x_Senior_Design/blob/master/Design%20files/Auxiliary%20Stepper%20Driver%20PCB/Images/PCB_LayerBottom.jpg)
+![PCB](https://github.com/Jbruslind/ECE44x_Senior_Design/blob/master/Electrical/Auxiliary%20Stepper%20Driver%20PCB/Images/PCB.jpg)
+![PCB_Bottom](https://github.com/Jbruslind/ECE44x_Senior_Design/blob/master/Electrical/Auxiliary%20Stepper%20Driver%20PCB/Images/PCB_Bottom.jpg)
+![PCB_LayerTop](https://github.com/Jbruslind/ECE44x_Senior_Design/blob/master/Electrical/Auxiliary%20Stepper%20Driver%20PCB/Images/PCB_LayerTop.jpg)
+![PCB_LayerBottom](https://github.com/Jbruslind/ECE44x_Senior_Design/blob/master/Electrical/Auxiliary%20Stepper%20Driver%20PCB/Images/PCB_LayerBottom.jpg)
 
 ## Ethernet Port
 
