@@ -15,8 +15,8 @@ been custom made/designed/modeled by Jorian Bruslind.
 
 ## Delta Bot
 
-This directory contains the orignial file for a base model Delta robot designed by daGHIZmo on Thingiverse. We used this as a model reference to see 
-how a Delta robot looks like using 3D printed components. I highly reccomend to check out his thingiverse profile, it has got some great stuff
+This directory contains the original file for a base model Delta robot designed by daGHIZmo on Thingiverse. We used this as a model reference to see 
+how a Delta robot looks like using 3D printed components. I highly recommend to check out his thingiverse profile, it has got some great stuff
 
 ![Link here](https://www.thingiverse.com/daGHIZmo/about)
 
@@ -27,7 +27,7 @@ contained in this directory has the McMaster part number as a prefix in its name
 
 ## Digikey Files
 
-We also purchased quite a few parts from digikey although these were more electrically related than mechancial. The mechanical parts that were purchased 
+We also purchased quite a few parts from digikey although these were more electrically related than mechanical. The mechanical parts that were purchased 
 were mostly connectors to interface with the stepper motors we purchased. In addition this directory also contains a model for the Raspberry PI 4 and 
 Raspberry Pi Camera v2.0 (both were used in the system). 
 
@@ -38,7 +38,7 @@ for this is contained in this directory.
 
 ## Metric Nuts/Bolts
 
-For this project we tried to maintin metric as our standard measurement of choice due to its ubiquity in engineering and ease of use (simple, rounded numbers). 
+For this project we tried to maintain metric as our standard measurement of choice due to its ubiquity in engineering and ease of use (simple, rounded numbers). 
 As such we have a general repository of metric bolts/nuts that we used in our models. This section does not have a specific supplier because we bought 
 these parts from various suppliers (Amazon, McMaster, local hardware stores, etc)
 
