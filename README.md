@@ -54,6 +54,8 @@ of the system as well. Such duties include enabling and disabling the vacuum pum
 
 ### Computer Science Sub-System
 
+![Processed Image](https://github.com/Jbruslind/ECE44x_Senior_Design/tree/master/Computer%20Science/Images/0.jpg "Image after being analyzed by the OpenCV") ![GUI](https://github.com/Jbruslind/ECE44x_Senior_Design/tree/master/Computer%20Science/Images/GUI.png "User Interface")
+
 The computer science sub-system has three primary functions: automation control, computer vision image analysis and user interface.
  All three of these functions are implemented on the RaspberryPi microcontroller. The user interface was created using PyQT and is used to input various pieces of data 
  such as how many samples are to be analyzed and also where the user starts/stops/resets the analysis process. The user interface is updated
