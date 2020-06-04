@@ -8,7 +8,8 @@ so prevalent) and are instead just placed into a general directory called "Metri
 
 Below is a general description of the different directories and what they contain 
 
-## Custom Delta
+
+## ![Custom Delta]((https://github.com/Jbruslind/ECE44x_Senior_Design/tree/master/Mechanical/Project%20Model%20Files/Inventor%20Files/Custom_Delta))
 
 This directory contains all of the custom made components for the current revision of the Delta robot. All of the files contained in this directory have 
 been custom made/designed/modeled by Jorian Bruslind. 

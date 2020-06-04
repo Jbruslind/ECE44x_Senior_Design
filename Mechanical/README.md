@@ -13,3 +13,4 @@ The file structure goes as:
 	- ![Inventor Files](https://github.com/Jbruslind/ECE44x_Senior_Design/tree/master/Mechanical/Project%20Model%20Files/Inventor%20Files)
 	- ![PetriFilm Model](https://github.com/Jbruslind/ECE44x_Senior_Design/tree/master/Mechanical/Project%20Model%20Files/PetriFilm%20Model)
 
+Almost all of the work within this sub-group is contained in the Inventor Files directory. 
