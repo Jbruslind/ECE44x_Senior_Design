@@ -3,19 +3,19 @@ ECE 441 - 443 Project folder with files for senior capstone project for Jorian B
 
 Brief descriptions of each member's responsibilities are detailed here. Below is a list of main projects for each team: 
 
-- ![Electrical](https://github.com/Jbruslind/ECE44x_Senior_Design/tree/master/Electrical)
+- ![**Electrical**](https://github.com/Jbruslind/ECE44x_Senior_Design/tree/master/Electrical)
 	- ![Stepper Driver PCB](https://github.com/Jbruslind/ECE44x_Senior_Design/tree/master/Design%20files/Auxiliary%20Stepper%20Driver%20PCB)
 
 	- ![Central Processor PCB](https://github.com/Jbruslind/ECE44x_Senior_Design/tree/master/Design%20files/Central%20Procesing%20PCB)
 
 	- ![Vaccumn Pump Controller](https://github.com/Jbruslind/ECE44x_Senior_Design/tree/master/Design%20files/Vacuum%20Pump)
 
-- ![Mechanical](https://github.com/Jbruslind/ECE44x_Senior_Design/tree/master/Mechanical) 
+- ![**Mechanical**](https://github.com/Jbruslind/ECE44x_Senior_Design/tree/master/Mechanical) 
 	- ![Custom Mechanical Parts/Models](https://github.com/Jbruslind/ECE44x_Senior_Design/tree/master/Design%20files/Delta%20Robot%20Arm/Inventor%20Files/Custom_Delta)
 	
 	- ![PCB Modeling](https://github.com/Jbruslind/ECE44x_Senior_Design/tree/master/Mechanical/Delta%20Robot%20Arm)
  
-- ![Computer Science](https://github.com/Jbruslind/ECE44x_Senior_Design/tree/master/Computer%20Science)
+- ![**Computer Science**](https://github.com/Jbruslind/ECE44x_Senior_Design/tree/master/Computer%20Science)
 	- ![Main Program](https://github.com/Jbruslind/ECE44x_Senior_Design/tree/master/Computer%20Science/MircobialAnalysisTool)
 	
 	- ![GRBL Code](https://github.com/Jbruslind/ECE44x_Senior_Design/tree/master/Computer%20Science/GRBL%20Code)
