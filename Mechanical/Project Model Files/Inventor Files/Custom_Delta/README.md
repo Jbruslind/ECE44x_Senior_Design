@@ -217,9 +217,4 @@ Other than that this is just a top shroud that sits on top of the box and enclos
 
 <img src="https://github.com/Jbruslind/ECE44x_Senior_Design/blob/master/Capstone%20Class%20Files/Pictures/Mech%20Pictures/Motor_Node_top.png" />
 
-### PetriFilm
 
-PetriFilm was modeled just as a reference for the design of the system. It has been created to reflect the same color scheme and dimensions as actual Petrifilm
-(specifically the anaerobic bacterial film)
-
-<img src="https://github.com/Jbruslind/ECE44x_Senior_Design/blob/master/Capstone%20Class%20Files/Pictures/Mech%20Pictures/PetriFilm.png"  />
