@@ -11,7 +11,7 @@ This module takes in a file from the "/images" folder located in the current wor
 robo_controls.py – Sends automation control messages.
 This module sends automation control messages via serial interface to the ATmega328 where they are decoded and used to set the motor anagles.
 
-#The GUI
+### User Interface
 
 The GUI was developed using [PyQt5](https://pypi.org/project/PyQt5/). First, [QtDesigner](https://pythonbasics.org/qt-designer-python/) was used to build the basic layout, such as button and label placement placement.
 
@@ -29,7 +29,7 @@ Once the basic layout was set, QtDesigner exported a .ui file. This is then conv
 
 This gave a baseline for the GUI and we were then able to implement the fucntions that we need the GUI to perform. We were able to implement PyQt [QThreadPools](https://doc.qt.io/qt-5/qthreadpool.html) the let the GUI update with current image and other relevenat sample data. All threading was based on [this tutorial](https://www.learnpyqt.com/courses/concurrent-execution/multithreading-pyqt-applications-qthreadpool/)
 
-#Computer Vision
+### Computer Vision 
 
 The basics of the computer vision was based on [this tutorial](https://www.learnopencv.com/blob-detection-using-opencv-python-c/). Though we were not able to fully implement the computer vision system due to the COVID19 global health crisis, the provided is a starting point to begin fine tuning the computer vision system.
 
