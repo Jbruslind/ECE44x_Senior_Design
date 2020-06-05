@@ -32,16 +32,21 @@ This gave a baseline for the GUI and we were then able to implement the fucntion
 #Computer Vision
 
 The basics of the computer vision was based on [this tutorial](https://www.learnopencv.com/blob-detection-using-opencv-python-c/). Though we were not able to fully implement the computer vision system due to the COVID19 global health crisis, the provided is a starting point to begin fine tuning the computer vision system.
-<p align="middle">
-   <img src = https://github.com/Jbruslind/ECE44x_Senior_Design/blob/master/Computer%20Science/Images/BlobTest.jpg/>
-</p>
+
 The computer vision system follows these basic steps:
 1. Capture image.
+
 2. Convert image to grayscale.
+
 3. Run analysis based on certain parameters (a full explaination of the parameters can be found in the linked tutorial).
 
+<p align="middle">
+   <img src = https://github.com/Jbruslind/ECE44x_Senior_Design/blob/master/Computer%20Science/Images/BlobTest.jpg>
+</p>
 4. Keep count of microbial colony growths.
+
 5. Place keypoints on image over detected microbal colony growths.
+
 6. Output the image with keypoints to the designated directory so it can be dislpayed on the GUI.
+
 7. Output relevenat sample data to a .csv file.
- 
