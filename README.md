@@ -11,7 +11,7 @@ Brief descriptions of each member's responsibilities are detailed here. Below is
 	- [Vaccumn Pump Controller](https://github.com/Jbruslind/ECE44x_Senior_Design/tree/master/Electrical/Vacuum%20Pump)
 
 - [**Mechanical**](https://github.com/Jbruslind/ECE44x_Senior_Design/tree/master/Mechanical) 
-	- ![Custom Mechanical Parts/Models](https://github.com/Jbruslind/ECE44x_Senior_Design/tree/master/Mechanical/Project%20Model%20Files/Inventor%20Files/Custom_Delta)
+	- [Custom Mechanical Parts/Models](https://github.com/Jbruslind/ECE44x_Senior_Design/tree/master/Mechanical/Project%20Model%20Files/Inventor%20Files/Custom_Delta)
 	
 	- [PCB Modeling](https://github.com/Jbruslind/ECE44x_Senior_Design/tree/master/Mechanical/Delta%20Robot%20Arm)
  
