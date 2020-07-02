@@ -3,22 +3,22 @@ ECE 441 - 443 Project folder with files for senior capstone project for Jorian B
 
 Brief descriptions of each member's responsibilities are detailed here. Below is a list of main projects for each team: 
 
-- ![**Electrical**](https://github.com/Jbruslind/ECE44x_Senior_Design/tree/master/Electrical)
-	- ![Stepper Driver PCB](https://github.com/Jbruslind/ECE44x_Senior_Design/tree/master/Electrical/Auxiliary%20Stepper%20Driver%20PCB)
+- [**Electrical**](https://github.com/Jbruslind/ECE44x_Senior_Design/tree/master/Electrical)
+	- [Stepper Driver PCB](https://github.com/Jbruslind/ECE44x_Senior_Design/tree/master/Electrical/Auxiliary%20Stepper%20Driver%20PCB)
 
-	- ![Central Processor PCB](https://github.com/Jbruslind/ECE44x_Senior_Design/tree/master/Electrical/Central%20Procesing%20PCB)
+	- [Central Processor PCB](https://github.com/Jbruslind/ECE44x_Senior_Design/tree/master/Electrical/Central%20Procesing%20PCB)
 
-	- ![Vaccumn Pump Controller](https://github.com/Jbruslind/ECE44x_Senior_Design/tree/master/Electrical/Vacuum%20Pump)
+	- [Vaccumn Pump Controller](https://github.com/Jbruslind/ECE44x_Senior_Design/tree/master/Electrical/Vacuum%20Pump)
 
-- ![**Mechanical**](https://github.com/Jbruslind/ECE44x_Senior_Design/tree/master/Mechanical) 
-	- ![Custom Mechanical Parts/Models](https://github.com/Jbruslind/ECE44x_Senior_Design/tree/master/Mechanical/Project%20Model%20Files/Inventor%20Files/Custom_Delta)
+- [**Mechanical**](https://github.com/Jbruslind/ECE44x_Senior_Design/tree/master/Mechanical) 
+	- [Custom Mechanical Parts/Models](https://github.com/Jbruslind/ECE44x_Senior_Design/tree/master/Mechanical/Project%20Model%20Files/Inventor%20Files/Custom_Delta)
 	
-	- ![PCB Modeling](https://github.com/Jbruslind/ECE44x_Senior_Design/tree/master/Mechanical/Delta%20Robot%20Arm)
+	- [PCB Modeling](https://github.com/Jbruslind/ECE44x_Senior_Design/tree/master/Mechanical/Delta%20Robot%20Arm)
  
-- ![**Computer Science**](https://github.com/Jbruslind/ECE44x_Senior_Design/tree/master/Computer%20Science)
-	- ![Main Program](https://github.com/Jbruslind/ECE44x_Senior_Design/tree/master/Computer%20Science/MircobialAnalysisTool)
+- [**Computer Science**](https://github.com/Jbruslind/ECE44x_Senior_Design/tree/master/Computer%20Science)
+	- [Main Program](https://github.com/Jbruslind/ECE44x_Senior_Design/tree/master/Computer%20Science/MircobialAnalysisTool)
 	
-	- ![GRBL Code](https://github.com/Jbruslind/ECE44x_Senior_Design/tree/master/Computer%20Science/GRBL%20Code)
+	- [GRBL Code](https://github.com/Jbruslind/ECE44x_Senior_Design/tree/master/Computer%20Science/GRBL%20Code)
 
 Automated Microbial Analysis 
 
