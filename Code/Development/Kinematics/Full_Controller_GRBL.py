@@ -14,7 +14,7 @@ import time
 clamp = lambda n, minn, maxn: max(min(maxn, n), minn)
 
 # Open grbl serial port
-s = serial.Serial('COM7',115200, timeout=.01) #COM port should be whatever the GRBL reciever is on
+s = serial.Serial('COM8',115200, timeout=.01) #COM port should be whatever the GRBL reciever is on
 
 #____________________________Kinematics Setup_____________________________________
 th1 = th2 = th3 = 90
@@ -145,28 +145,54 @@ while 1:
         break
     if usb_buttons[6] == 1:
         start_code = 1
+    if usb_buttons[4] == 1:
+        auto_mode = 1
+    if usb_buttons[5] == 1:
+        auto_mode = 0
         
     if start_code:
-        com1 += int(usb_axes[3]*5)
-        com2 += int(usb_axes[4]*5)
-        com3 += int(usb_axes[2]*5)
-        com1 = clamp(com1, -130, 130)
-        com2 = clamp(com2, -130, 130)
-        com3 = clamp(com3, -475, -190)
-        angle1, angle2, angle3 = delta_calcInverse(com1, com2, com3);
-        #print(angle1, angle2, angle3)
-        step1 = int(1600/360 * angle1)
-        step2 = int(1600/360 * angle2)
-        step3 = int(1600/360 * angle3)
-        if step1 != prevstep1 or step2 != prevstep2 or step3 != prevstep3:
-            grbl_command = "G90 G0 " + "X" + str(step1 * -1) + " Y" + str(step2 *-1) + " Z" + str(step3*-1) + '\n'
-            print(grbl_command)
-            s.write(grbl_command.encode())
-            prevstep1 = step1
-            prevstep2 = step2
-            prevstep3 = step3
-            print(s.readline().strip())
-            time.sleep(.03)
+        if auto_mode == 1:
+            send_command(10,-97,120)
+            time.sleep(sleep_t)
+            send_command(-152,-65,145)
+            time.sleep(sleep_t)
+            send_command(-111,146,-72)
+            time.sleep(sleep_t)
+            send_command(43,102,-111)
+            time.sleep(sleep_t)
+            send_command(117,-76,10)
+            time.sleep(sleep_t)
+            send_command(21,52,45)
+            time.sleep(sleep_t)
+            send_command(-29,-3,-9)
+            time.sleep(sleep_t)
+            send_command(51,86,79)
+            time.sleep(sleep_t)
+            send_command(-29,-3,-9)
+            time.sleep(sleep_t * 10)
+            if usb_buttons[6] == 1:
+                auto_mode = 0
+        else:
+            com1 += int(usb_axes[3]*5)
+            com2 += int(usb_axes[4]*5)
+            com3 += int(usb_axes[2]*5)
+            com1 = clamp(com1, -130, 130)
+            com2 = clamp(com2, -130, 130)
+            com3 = clamp(com3, -475, -190)
+            angle1, angle2, angle3 = delta_calcInverse(com1, com2, com3);
+            #print(angle1, angle2, angle3)
+            step1 = int(1600/360 * angle1)
+            step2 = int(1600/360 * angle2)
+            step3 = int(1600/360 * angle3)
+            if step1 != prevstep1 or step2 != prevstep2 or step3 != prevstep3:
+                grbl_command = "G90 G0 " + "X" + str(step1 * -1) + " Y" + str(step2 *-1) + " Z" + str(step3*-1) + '\n'
+                print(grbl_command)
+                s.write(grbl_command.encode())
+                prevstep1 = step1
+                prevstep2 = step2
+                prevstep3 = step3
+                print(s.readline().strip())
+                time.sleep(.03)
 #        send_command(10,-97,120)
 #        time.sleep(sleep_t)
 #        send_command(-152,-65,145)
